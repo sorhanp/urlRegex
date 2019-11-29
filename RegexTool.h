@@ -1,6 +1,7 @@
 #pragma once
 
 #include <regex.h>
+#include <cstddef>
 
 class RegexTool
 {

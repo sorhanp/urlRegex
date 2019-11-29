@@ -1,5 +1,4 @@
 #include <boost/test/unit_test.hpp>
-#include <fakeit.hpp>
 
 #include <fstream>
 #include <string>
@@ -119,7 +118,6 @@ BOOST_AUTO_TEST_CASE(TextRegex_NonAccepted)
     BOOST_REQUIRE_EQUAL(RegexTool::Match(text, pattern), false);
 }
 
-// Modem (Quactel MC60E) supports only http(s) and ftp(s), thus coap etc. are not used for file transfer
 BOOST_AUTO_TEST_CASE(UrlRegex_StandardProtocol)
 {
     const char* pattern = "^(ht|f)tp(s?)://";
