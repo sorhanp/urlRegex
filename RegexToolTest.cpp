@@ -10,9 +10,8 @@ struct RegexToolTestFixture
 {
     std::vector<std::string> StrVectorURL;
     std::vector<std::string> StrVectorBadURL;
-    const char* Finalpattern = "^(ht|f)tp(s?)://[a-zA-Z0-9]+\\.*[[:graph:]]*(:(0-9))*(/?)[[:graph:]]*$";
+    const char* Finalpattern = "^(ht|f)tp(s?)?://[a-zA-Z0-9]\\.*[[:graph:]]*$";
     
-//(?:(?:(?:https?|ftp):)?\\/\\/) +
     RegexToolTestFixture()
     {
     }
