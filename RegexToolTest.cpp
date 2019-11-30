@@ -10,8 +10,9 @@ struct RegexToolTestFixture
 {
     std::vector<std::string> StrVectorURL;
     std::vector<std::string> StrVectorBadURL;
-    const char* Finalpattern = "^(ht|f)tp(s?)://[a-zA-Z0-9](:(0-9))*(/?)[a-zA-Z0-9/&%#_',\\-\\.\\?\\$\\+]";
-
+    const char* Finalpattern = "^(ht|f)tp(s?)://[a-zA-Z0-9]+\\.*[[:graph:]]*(:(0-9))*(/?)[[:graph:]]*$";
+    
+//(?:(?:(?:https?|ftp):)?\\/\\/) +
     RegexToolTestFixture()
     {
     }
@@ -47,6 +48,7 @@ struct RegexToolTestFixture
         StrVectorURL.push_back("http://foo.bar/?q=Test%20URL-encoded%20stuff");
         StrVectorURL.push_back("http://1337.net");
         StrVectorURL.push_back("http://a.b-c.de");
+        StrVectorURL.push_back("http://a.b-c-d-e.de/de-a-b");
         StrVectorURL.push_back("http://223.255.255.254");
         StrVectorURL.push_back("https://foo_bar.example.com/");
     }
