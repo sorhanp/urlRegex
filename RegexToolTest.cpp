@@ -11,6 +11,7 @@ struct RegexToolTestFixture
     std::vector<std::string> StrVectorURL;
     std::vector<std::string> StrVectorBadURL;
     const char* Finalpattern = "^(ht|f)tp(s?)://[[:alnum:]][[:graph:]]*$";
+    //continue from https://stackoverflow.com/questions/55311580/how-to-write-negative-lookahead-in-posix-regex
     
     RegexToolTestFixture()
     {
